@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, RefreshIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, RefreshCw } from "lucide-react";
 
 interface WebViewProps {
   url: string;
@@ -37,7 +37,7 @@ const WebView: React.FC<WebViewProps> = ({ url, onNavigate, isLoading }) => {
             disabled={!url || isLoading}
             onClick={() => url && onNavigate(url)}
           >
-            <RefreshIcon className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
           </Button>
         </div>
         
