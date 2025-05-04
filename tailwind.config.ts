@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// AI Browser Theme
+				aibrowser: {
+					primary: '#3a86ff',
+					secondary: '#8338ec',
+					accent: '#3bf0e4',
+					background: '#0a1128',
+					text: '#ffffff',
+					border: '#2d4263',
+					highlight: '#00b4d8',
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'gradient-flow': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: 1 },
+					'50%': { opacity: 0.8 },
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(10px)', opacity: 0 },
+					'100%': { transform: 'translateY(0)', opacity: 1 },
+				},
+				'fade-in': {
+					'0%': { opacity: 0 },
+					'100%': { opacity: 1 },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'gradient-flow': 'gradient-flow 3s ease infinite',
+				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
+				'slide-up': 'slide-up 0.3s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
 			}
 		}
 	},
